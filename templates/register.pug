@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='favicon.ico?v=1.1')
+    title Learners-SignUp
+    link(rel='stylesheet', href='sign-up.css')
+  body
+    .container
+      main
+        a#btn-home(href="/") Home
+        form#myForm(action='/register', method='post' onsubmit="return validate()")
+          span Sign Up
+          input(autocomplete='off', type='text', placeholder='First Name', name='firstName' id="firstName")
+          input(autocomplete='off', type='text', placeholder='Last Name', name='lastName' id="lastName")
+          input#male(type='radio', value='male', name='gender' selected)
+          |  
+          label(for='male') Male
+          input#female(type='radio', value='female', name='gender')
+          |  
+          label(for='female') Female
+          input(autocomplete='off', type='email', placeholder='Email', name='email' id="email")
+          input(autocomplete='off', type='password', placeholder='Password', name='password' id="password")
+          input(autocomplete='off', type='password', placeholder='Confirm Password', name='confirmPassword' id="confirmPassword")
+          label(id='message' style="display:block;") #{message}
+          .btns
+            button(type='submit') Submit
+            button(type='reset') Cancel
+        div#loginHere
+          p Already have an account? 
+          a(href='/login') Login here 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="register.js"></script>

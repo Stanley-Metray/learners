@@ -1,0 +1,134 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='favicon.ico?v=1.1')
+    title Learners
+    script(src='https://kit.fontawesome.com/ac5bf9eb63.js')
+    link(rel='stylesheet', href='style.css')
+  body
+    img(src='b620ccb3ae8c14ea5447d159ebb1da58.gif', alt='loading...' id="loading")
+    .container
+      #logo Learners
+      nav
+        .dropdown
+          i#btn-dropdown.fas.fa-chevron-circle-down
+        ul#topmenu.menu
+          li
+            a#signUp(href='/sign-up') Sign Up
+          li
+            a#login(href='/login') Login
+          li
+            a(href='#courses') Deal of The Day
+          li
+            a(href='#courses') View All Courses
+      main
+        section.sec.sec-1
+          .left
+            h1
+              | The Best 
+              span Platform
+              |  to 
+              br
+              |  
+              span Learn
+              |  Programming Languages
+            a#explore(href="#courses") Explore Now
+          .right
+            img(src='Hand coding-pana (1).png', alt='hero-image')
+        section.sec.sec-2
+          .left
+            img(src='6369740.jpg', alt='img')
+          .right
+            p Are you a beginner?
+            p No knowledge about programming languages?
+        section.sec.sec-3
+          .left
+            p#p1 Don&apos;t worry
+            img(src='imgonline-com-ua-ReplaceColor-mWHUjFw5OMU9Lq.jpg', alt='img')
+            p#p2 We are here to build your programming skills
+            p#p3
+              | Choose our courses and learn programming languages in an easy manner within two months
+        .arrow
+          img(src='down-arrow-5-128.png', alt='')
+        h3 Best Courses in Minimum Price
+        section.course-section#courses
+          .course.c1
+            img(src='C.png', alt='img')
+            p.title C
+            p.price Rs 250.0
+            p.buy
+              a(href='#') Buy
+          .course.c2
+            img(src='C++.png', alt='img')
+            p.title C++
+            p.price Rs 350.0
+            p.buy
+              a(href='#') Buy
+          .course.c3
+            img(src='Data Structures.png', alt='')
+            p.title Data Structures
+            p.price Rs 500.0
+            p.buy
+              a(href='#') Buy
+          .course.c4
+            img(src='Java.png', alt='')
+            p.title Java
+            p.price Rs 350.0
+            p.buy
+              a(href='#') Buy
+          .course.c1
+            img(src='HTML.png', alt='img')
+            p.title HTML
+            p.price Rs 200.0
+            p.buy
+              a(href='#') Buy
+          .course.c2
+            img(src='CSS.png', alt='img')
+            p.title CSS
+            p.price Rs 300.0
+            p.buy
+              a(href='#') Buy
+          .course.c3
+            img(src='JavaScript.png', alt='')
+            p.title JavaScript
+            p.price Rs 400.0
+            p.buy
+              a(href='#') Buy
+          .course.c4
+            img(src='MongoDb.png', alt='')
+            p.title MongoDb
+            p.price Rs 350.0
+            p.buy
+              a(href='#') Buy
+          .course.c1
+            img(src='ExpressJs.png', alt='')
+            p.title ExpressJs
+            p.price Rs 250.0
+            p.buy
+              a(href='#') Buy
+    footer
+      ul
+        li Follow us on
+        li
+          i.fab.fa-facebook-square
+        li
+          i.fab.fa-instagram
+        li
+          i.fab.fa-twitter
+        li
+          i.fab.fa-linkedin
+      #logo.logo2 Learners
+      .copyright
+        p
+          span Developed by 
+          span Stanley Metray
+        p &copy; Copyright 2023 Example
+    form(id="myForm" action='/buy', method='post')
+      input(type='text', name='courseName')
+      input(type='text', name='coursePrice')
+      input(type='text', name='courseDuration')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+    script(src='script.js')

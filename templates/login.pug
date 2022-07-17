@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='favicon.ico?v=1.1')
+    title Login
+    link(rel='stylesheet', href='sign-up.css')
+  body
+    .container
+      main
+        a#btn-home(href="/") Home
+        form#myForm(action='/login-user', method='post' onsubmit="return validate()")
+          span Login
+          input(autocomplete='off', type='email', placeholder='Email', name='email')
+          input(autocomplete='off', type='password', placeholder='Password', name='password')
+          label#l1(for='forgetPassword')
+            a(href='#') Forget Password?
+          label(id='message' style="display:block;") #{message}
+          .btns
+            button(type='submit') Login
+          label#l2(for='notHaveAccount')
+            | Not have account? 
+            a(href='/sign-up') SignUp here
+    script(src='register.js')

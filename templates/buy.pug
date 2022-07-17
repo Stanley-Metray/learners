@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='favicon.ico?v=1.1')
+    title Learners-BuyCourse
+    link(rel='stylesheet', href='style.css')
+  body
+    .container-buy
+      .course.buy-Course
+        img(src='', alt='img' id="courseImg")
+        p.title#title #{course.courseName}
+      table#infoTable
+        tbody
+          tr
+            td Course Name
+            td#courseName #{course.courseName}
+          tr
+            td Duration
+            td#courseDuration #{course.courseDuration}
+          tr
+            td Price
+            td#coursePrice #{course.coursePrice}
+          tr
+            td Username
+            td#userName #{course.username}
+          tr
+            td Email
+            td#userEmail #{course.email}
+          tr 
+            td 
+            td 
+              a#btn-home(href="/") Click Here To Go Back
+      #msg 
+      button.btnPurchase#btnPurchase Purchase
+  script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+  script(src='buy.js')
